@@ -27,7 +27,7 @@ public class FilledStory extends AppCompatActivity {
         setContentView(R.layout.activity_filled_story);
 
         Intent intent = getIntent();
-        String editText = intent.getStringExtra("edit_text");
+        String editText = intent.getStringExtra(EDIT_TEXT);
         String editText2 = intent.getStringExtra(EDIT_TEXT2);
         String editText3 = intent.getStringExtra(EDIT_TEXT3);
         String editText4 = intent.getStringExtra(EDIT_TEXT4);
