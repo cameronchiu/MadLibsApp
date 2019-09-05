@@ -8,37 +8,24 @@ import android.widget.TextView;
 
 public class FilledStory extends AppCompatActivity {
 
-    public static final String EDIT_TEXT = "edit_text";
-    public static final String EDIT_TEXT2 = "edit_text2";
-    public static final String EDIT_TEXT3 = "edit_text3";
-    public static final String EDIT_TEXT4 = "edit_text4";
-    public static final String EDIT_TEXT5 = "edit_text5";
-    public static final String EDIT_TEXT6 = "edit_text6";
-    public static final String EDIT_TEXT7 = "edit_text7";
-    public static final String EDIT_TEXT8 = "edit_text8";
-    public static final String EDIT_TEXT9 = "edit_text9";
-    public static final String EDIT_TEXT10 = "edit_text10";
-    public static final String EDIT_TEXT11 = "edit_text11";
-    public static final String EDIT_TEXT12 = "edit_text12";
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_filled_story);
 
         Intent intent = getIntent();
-        String editText = intent.getStringExtra(EDIT_TEXT);
-        String editText2 = intent.getStringExtra(EDIT_TEXT2);
-        String editText3 = intent.getStringExtra(EDIT_TEXT3);
-        String editText4 = intent.getStringExtra(EDIT_TEXT4);
-        String editText5 = intent.getStringExtra(EDIT_TEXT5);
-        String editText6 = intent.getStringExtra(EDIT_TEXT6);
-        String editText7 = intent.getStringExtra(EDIT_TEXT7);
-        String editText8 = intent.getStringExtra(EDIT_TEXT8);
-        String editText9 = intent.getStringExtra(EDIT_TEXT9);
-        String editText10 = intent.getStringExtra(EDIT_TEXT10);
-        String editText11 = intent.getStringExtra(EDIT_TEXT11);
-        String editText12 = intent.getStringExtra(EDIT_TEXT12);
+        String editText = intent.getStringExtra("box1");
+        String editText2 = intent.getStringExtra("box2");
+        String editText3 = intent.getStringExtra("box3");
+        String editText4 = intent.getStringExtra("box4");
+        String editText5 = intent.getStringExtra("box5");
+        String editText6 = intent.getStringExtra("box6");
+        String editText7 = intent.getStringExtra("box7");
+        String editText8 = intent.getStringExtra("box8");
+        String editText9 = intent.getStringExtra("box9");
+        String editText10 = intent.getStringExtra("box10");
+        String editText11 = intent.getStringExtra("box11");
+        String editText12 = intent.getStringExtra("box12");
 
         String story = "The Mobile App Development class is a(n) "+ editText + " place" +
                 " to say the least. The classmates in period 5 like "+editText2+" and "+editText3
