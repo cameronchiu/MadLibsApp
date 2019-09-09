@@ -31,7 +31,7 @@
             android:layout_row="1"
             android:layout_column="0"
             android:ems="10"
-            android:hint="Name"
+            android:hint="Someone in M448"
             android:inputType="textPersonName" />
 
         <EditText
@@ -41,7 +41,7 @@
             android:layout_row="2"
             android:layout_column="0"
             android:ems="10"
-            android:hint="Name"
+            android:hint="Someone in M448"
             android:inputType="textPersonName" />
 
         <EditText
@@ -51,7 +51,7 @@
             android:layout_row="3"
             android:layout_column="0"
             android:ems="10"
-            android:hint='verb ending in "ing"'
+            android:hint="Verb"
             android:inputType="textPersonName" />
 
         <EditText
@@ -131,7 +131,7 @@
             android:layout_row="11"
             android:layout_column="0"
             android:ems="10"
-            android:hint="Name"
+            android:hint="Someone in M448"
             android:inputType="textPersonName" />
 
     </GridLayout>
@@ -143,8 +143,10 @@
         android:layout_marginStart="56dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="54dp"
+        android:background="@drawable/custombutton"
         android:onClick="fillInStory"
         android:text="Submit"
+        android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/gridLayout"
         app:layout_constraintTop_toTopOf="parent" />
@@ -154,9 +156,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="26dp"
-        android:text="AUTO-FILL"
-        app:layout_constraintStart_toStartOf="@+id/buttonSubmit"
-        app:layout_constraintTop_toBottomOf="@+id/buttonSubmit"
+        android:background="@drawable/custombutton"
         android:onClick="autoFill"
-        />
+        android:text="AUTO-FILL"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="@+id/buttonSubmit"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSubmit" />
 </androidx.constraintlayout.widget.ConstraintLayout>
