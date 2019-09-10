@@ -9,6 +9,7 @@ import android.text.SpannableString;
 import android.text.SpannableStringBuilder;
 import android.text.style.ForegroundColorSpan;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 
 public class FilledStory extends AppCompatActivity {
@@ -31,6 +32,7 @@ public class FilledStory extends AppCompatActivity {
         String editText10 = intent.getStringExtra("box10");
         String editText11 = intent.getStringExtra("box11");
         String editText12 = intent.getStringExtra("box12");
+
 
         String special = "";
         String vowels = "aeiou";
@@ -183,13 +185,23 @@ public class FilledStory extends AppCompatActivity {
         str.setText(builder, TextView.BufferType.SPANNABLE);
     }
 
-//    public void onClick(View v){
-//        Intent myIntent = new Intent(Intent.ACTION_SEND);
-//        myIntent.setType("text/plain");
-//        String shareBody = "Your body here";
-//        String shareSub = "Your Subject here";
-//        myIntent.putExtra(Intent.EXTRA_SUBJECT,shareBody);
-//        myIntent.putExtra(Intent.EXTRA_TEXT, shareBody);
-//        startActivity(Intent.createChooser(myIntent,"Share using"));
-//    }
+    public void shareInfo(View v){
+        //getting a reference to my edit text fields
+        TextView story = (TextView) findViewById(R.id.story);
+
+        //extracting the text from those edit text fields
+        String strStory = story.getText().toString();
+
+
+        //These three lines can send the image to any app that sends messages
+        Intent intent2 = new Intent(Intent.ACTION_SEND);
+        intent2.setType("text/plain");
+        intent2.putExtra(Intent.EXTRA_TEXT, strStory);
+        String chooserTitle = getString(R.string.chooser);
+        Intent chosenIntent = Intent.createChooser(intent2, chooserTitle);
+        startActivity(chosenIntent);
+
+
+
+    }
 }
